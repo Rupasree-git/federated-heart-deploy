@@ -1,0 +1,639 @@
+[
+  {
+    "index": 0,
+    "timestamp": "2026-04-14T14:30:27.896564",
+    "data": "Genesis Block",
+    "previous_hash": "0",
+    "hash": "dec6b182f32e0ef2259d08f6c3de3b5f1808fb546435a47f69d2d09efe41d2fa"
+  },
+  {
+    "index": 1,
+    "timestamp": "2026-04-14T14:30:34.231831",
+    "data": {
+      "round": 1,
+      "avg_val_acc": 0.5655,
+      "trust_scores": [
+        0.8984,
+        0.9435,
+        0.9493
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 6.9,
+        "Hospital_B": 1.27,
+        "Hospital_C": 3.72
+      },
+      "global_model_hash": "d942b4b661597bd1"
+    },
+    "previous_hash": "dec6b182f32e0ef2259d08f6c3de3b5f1808fb546435a47f69d2d09efe41d2fa",
+    "hash": "3ef6feb3a55ee85ad6caf5133465f61024b9f458aa49f31518b8f0bd30f0d4c4"
+  },
+  {
+    "index": 2,
+    "timestamp": "2026-04-14T14:30:41.941922",
+    "data": {
+      "round": 2,
+      "avg_val_acc": 0.5399,
+      "trust_scores": [
+        0.8252,
+        0.8977,
+        0.9077
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 9.64,
+        "Hospital_B": 1.77,
+        "Hospital_C": 5.1
+      },
+      "global_model_hash": "3a88dc0fb8bcc5ec"
+    },
+    "previous_hash": "3ef6feb3a55ee85ad6caf5133465f61024b9f458aa49f31518b8f0bd30f0d4c4",
+    "hash": "3ead2ef228369e9ce6f985be38289c73602e8bc1b13692f44ffe59958a8400d2"
+  },
+  {
+    "index": 3,
+    "timestamp": "2026-04-14T14:30:48.609627",
+    "data": {
+      "round": 3,
+      "avg_val_acc": 0.5571,
+      "trust_scores": [
+        0.776,
+        0.8611,
+        0.8757
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 11.89,
+        "Hospital_B": 2.16,
+        "Hospital_C": 6.23
+      },
+      "global_model_hash": "575e8c0135793008"
+    },
+    "previous_hash": "3ead2ef228369e9ce6f985be38289c73602e8bc1b13692f44ffe59958a8400d2",
+    "hash": "5d17d5ad7df81aabc7302df51f7a02cde877e5ba63eefef9a1f4f7f330515d1e"
+  },
+  {
+    "index": 4,
+    "timestamp": "2026-04-14T14:30:56.013514",
+    "data": {
+      "round": 4,
+      "avg_val_acc": 0.5358,
+      "trust_scores": [
+        0.7368,
+        0.8323,
+        0.8493
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 13.9,
+        "Hospital_B": 2.51,
+        "Hospital_C": 7.22
+      },
+      "global_model_hash": "a8f44b9b35569d4b"
+    },
+    "previous_hash": "5d17d5ad7df81aabc7302df51f7a02cde877e5ba63eefef9a1f4f7f330515d1e",
+    "hash": "d7633d976ec4a7e8abf49abfdbe78dc27a213ea7f956b332d098ce1f63ede0a5"
+  },
+  {
+    "index": 5,
+    "timestamp": "2026-04-14T14:31:02.601206",
+    "data": {
+      "round": 5,
+      "avg_val_acc": 0.5624,
+      "trust_scores": [
+        0.7105,
+        0.8095,
+        0.8298
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 15.74,
+        "Hospital_B": 2.82,
+        "Hospital_C": 8.12
+      },
+      "global_model_hash": "ff05fbb4a7fcfed5"
+    },
+    "previous_hash": "d7633d976ec4a7e8abf49abfdbe78dc27a213ea7f956b332d098ce1f63ede0a5",
+    "hash": "c49625d5515104015189fa935635b621e5eb93a7dd4b9559195e9b6c87b62100"
+  },
+  {
+    "index": 6,
+    "timestamp": "2026-04-14T14:31:09.847260",
+    "data": {
+      "round": 6,
+      "avg_val_acc": 0.5731,
+      "trust_scores": [
+        0.688,
+        0.7907,
+        0.8138
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 17.46,
+        "Hospital_B": 3.1,
+        "Hospital_C": 8.95
+      },
+      "global_model_hash": "b787baea5ea37235"
+    },
+    "previous_hash": "c49625d5515104015189fa935635b621e5eb93a7dd4b9559195e9b6c87b62100",
+    "hash": "88bb185228226e4395adffd6184c0be79531a16f18c7f9bcfe228df586b0288c"
+  },
+  {
+    "index": 7,
+    "timestamp": "2026-04-14T14:31:16.539025",
+    "data": {
+      "round": 7,
+      "avg_val_acc": 0.5989,
+      "trust_scores": [
+        0.6791,
+        0.7759,
+        0.8021
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 19.1,
+        "Hospital_B": 3.37,
+        "Hospital_C": 9.74
+      },
+      "global_model_hash": "5cbdf2800eaebad7"
+    },
+    "previous_hash": "88bb185228226e4395adffd6184c0be79531a16f18c7f9bcfe228df586b0288c",
+    "hash": "f291367c57192a6dd34dee5010ace167a67cd218b9ba99103eac94a1bf12920b"
+  },
+  {
+    "index": 8,
+    "timestamp": "2026-04-14T14:31:23.961586",
+    "data": {
+      "round": 8,
+      "avg_val_acc": 0.6043,
+      "trust_scores": [
+        0.6663,
+        0.7642,
+        0.7926
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 20.67,
+        "Hospital_B": 3.62,
+        "Hospital_C": 10.5
+      },
+      "global_model_hash": "c1c6c4aebbfe702d"
+    },
+    "previous_hash": "f291367c57192a6dd34dee5010ace167a67cd218b9ba99103eac94a1bf12920b",
+    "hash": "6756400ea7ea1f61738ebe343ddba44cccad1c326a2346ab5384f9a50fa79628"
+  },
+  {
+    "index": 9,
+    "timestamp": "2026-04-14T14:31:30.541351",
+    "data": {
+      "round": 9,
+      "avg_val_acc": 0.5999,
+      "trust_scores": [
+        0.6627,
+        0.7556,
+        0.7853
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 22.19,
+        "Hospital_B": 3.86,
+        "Hospital_C": 11.22
+      },
+      "global_model_hash": "8853b1607f834a8d"
+    },
+    "previous_hash": "6756400ea7ea1f61738ebe343ddba44cccad1c326a2346ab5384f9a50fa79628",
+    "hash": "e4b368c0588dba59c60e47126f4ae7bea8bdd50067a9d9073ed2694c18c36cf1"
+  },
+  {
+    "index": 10,
+    "timestamp": "2026-04-14T14:31:38.221796",
+    "data": {
+      "round": 10,
+      "avg_val_acc": 0.5903,
+      "trust_scores": [
+        0.6583,
+        0.7483,
+        0.7794
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 23.66,
+        "Hospital_B": 4.09,
+        "Hospital_C": 11.91
+      },
+      "global_model_hash": "4aa4469f035b7272"
+    },
+    "previous_hash": "e4b368c0588dba59c60e47126f4ae7bea8bdd50067a9d9073ed2694c18c36cf1",
+    "hash": "de8cc3c7333d8b5191e4cf868947eeace8e05176ffe68c3e26f4905e9dab2acd"
+  },
+  {
+    "index": 11,
+    "timestamp": "2026-04-14T14:31:45.721777",
+    "data": {
+      "round": 11,
+      "avg_val_acc": 0.594,
+      "trust_scores": [
+        0.663,
+        0.7427,
+        0.7743
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 25.08,
+        "Hospital_B": 4.31,
+        "Hospital_C": 12.58
+      },
+      "global_model_hash": "bee49c43a071eb12"
+    },
+    "previous_hash": "de8cc3c7333d8b5191e4cf868947eeace8e05176ffe68c3e26f4905e9dab2acd",
+    "hash": "b578bb0ab430f0cb5a3cd13443c889eee2f55839a3dda39e62e91ad1c33df18d"
+  },
+  {
+    "index": 12,
+    "timestamp": "2026-04-14T14:31:53.198827",
+    "data": {
+      "round": 12,
+      "avg_val_acc": 0.5997,
+      "trust_scores": [
+        0.6732,
+        0.7376,
+        0.7703
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 26.47,
+        "Hospital_B": 4.52,
+        "Hospital_C": 13.23
+      },
+      "global_model_hash": "f79e2e9f9c6a36ce"
+    },
+    "previous_hash": "b578bb0ab430f0cb5a3cd13443c889eee2f55839a3dda39e62e91ad1c33df18d",
+    "hash": "89f51c52136b06611edf65ccf44ca21dc56ab408f52f4cf7cd289dd7cb17b692"
+  },
+  {
+    "index": 13,
+    "timestamp": "2026-04-14T14:32:01.128303",
+    "data": {
+      "round": 13,
+      "avg_val_acc": 0.5926,
+      "trust_scores": [
+        0.6848,
+        0.7336,
+        0.7676
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 27.83,
+        "Hospital_B": 4.73,
+        "Hospital_C": 13.87
+      },
+      "global_model_hash": "e6555f5abe025551"
+    },
+    "previous_hash": "89f51c52136b06611edf65ccf44ca21dc56ab408f52f4cf7cd289dd7cb17b692",
+    "hash": "4f1543dd3eb5c0545adc743dfe941b4e1819f6bf8e9e39bcbf414b21432558b0"
+  },
+  {
+    "index": 14,
+    "timestamp": "2026-04-14T14:32:07.874782",
+    "data": {
+      "round": 14,
+      "avg_val_acc": 0.5986,
+      "trust_scores": [
+        0.693,
+        0.7303,
+        0.7648
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 29.17,
+        "Hospital_B": 4.93,
+        "Hospital_C": 14.49
+      },
+      "global_model_hash": "5a01cc7c092ae755"
+    },
+    "previous_hash": "4f1543dd3eb5c0545adc743dfe941b4e1819f6bf8e9e39bcbf414b21432558b0",
+    "hash": "83789d2bf93cbf26ef10befc8345fe8b6ebd5a2d564b3d487c6be3596e8d6b13"
+  },
+  {
+    "index": 15,
+    "timestamp": "2026-04-14T14:32:15.598936",
+    "data": {
+      "round": 15,
+      "avg_val_acc": 0.6011,
+      "trust_scores": [
+        0.7011,
+        0.7278,
+        0.763
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 30.48,
+        "Hospital_B": 5.12,
+        "Hospital_C": 15.09
+      },
+      "global_model_hash": "05af932e70177fb7"
+    },
+    "previous_hash": "83789d2bf93cbf26ef10befc8345fe8b6ebd5a2d564b3d487c6be3596e8d6b13",
+    "hash": "feb73ef385c76c8f4b8c7de77fbbb9622dab1af331f7edb5bda902679355e73f"
+  },
+  {
+    "index": 16,
+    "timestamp": "2026-04-14T14:32:22.835549",
+    "data": {
+      "round": 16,
+      "avg_val_acc": 0.6102,
+      "trust_scores": [
+        0.7064,
+        0.7255,
+        0.761
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 31.76,
+        "Hospital_B": 5.31,
+        "Hospital_C": 15.69
+      },
+      "global_model_hash": "d758a4dba6faaf23"
+    },
+    "previous_hash": "feb73ef385c76c8f4b8c7de77fbbb9622dab1af331f7edb5bda902679355e73f",
+    "hash": "05757d70119eeef067daae7d4e97348ba87920c012b3e8699679fe3e836514b0"
+  },
+  {
+    "index": 17,
+    "timestamp": "2026-04-14T14:32:30.745048",
+    "data": {
+      "round": 17,
+      "avg_val_acc": 0.6107,
+      "trust_scores": [
+        0.7149,
+        0.7236,
+        0.7604
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 33.03,
+        "Hospital_B": 5.5,
+        "Hospital_C": 16.27
+      },
+      "global_model_hash": "556f09b100301eef"
+    },
+    "previous_hash": "05757d70119eeef067daae7d4e97348ba87920c012b3e8699679fe3e836514b0",
+    "hash": "b483aa405c3ea642a3be501a22f6c7e790f0b3a2447a021c5f376b23f6021c81"
+  },
+  {
+    "index": 18,
+    "timestamp": "2026-04-14T14:32:37.959143",
+    "data": {
+      "round": 18,
+      "avg_val_acc": 0.6157,
+      "trust_scores": [
+        0.7194,
+        0.7223,
+        0.7602
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 34.28,
+        "Hospital_B": 5.68,
+        "Hospital_C": 16.84
+      },
+      "global_model_hash": "607d7da08263cd4a"
+    },
+    "previous_hash": "b483aa405c3ea642a3be501a22f6c7e790f0b3a2447a021c5f376b23f6021c81",
+    "hash": "9db8d5e8de4651dc44eeb336e0d2ac284a52d4127608f455f2e45b5efec34d3e"
+  },
+  {
+    "index": 19,
+    "timestamp": "2026-04-14T14:32:45.872394",
+    "data": {
+      "round": 19,
+      "avg_val_acc": 0.6238,
+      "trust_scores": [
+        0.7228,
+        0.7216,
+        0.7602
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 35.51,
+        "Hospital_B": 5.86,
+        "Hospital_C": 17.4
+      },
+      "global_model_hash": "0779f0cb6cbe63d3"
+    },
+    "previous_hash": "9db8d5e8de4651dc44eeb336e0d2ac284a52d4127608f455f2e45b5efec34d3e",
+    "hash": "1a5478c26289d6d36b4e031efff957ba9b89506316cdfbcb8c12bfc3eca0adb8"
+  },
+  {
+    "index": 20,
+    "timestamp": "2026-04-14T14:32:53.920840",
+    "data": {
+      "round": 20,
+      "avg_val_acc": 0.6263,
+      "trust_scores": [
+        0.7259,
+        0.7206,
+        0.76
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 36.73,
+        "Hospital_B": 6.03,
+        "Hospital_C": 17.96
+      },
+      "global_model_hash": "9b0830eb369d1181"
+    },
+    "previous_hash": "1a5478c26289d6d36b4e031efff957ba9b89506316cdfbcb8c12bfc3eca0adb8",
+    "hash": "9ae3c35a9021de1a3898588bfb2a663c9971fcd00bc7504bae2a5c357a4f7789"
+  },
+  {
+    "index": 21,
+    "timestamp": "2026-04-14T14:33:01.181694",
+    "data": {
+      "round": 21,
+      "avg_val_acc": 0.6354,
+      "trust_scores": [
+        0.7334,
+        0.7202,
+        0.7603
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 37.93,
+        "Hospital_B": 6.2,
+        "Hospital_C": 18.5
+      },
+      "global_model_hash": "1238166a0ba7f9aa"
+    },
+    "previous_hash": "9ae3c35a9021de1a3898588bfb2a663c9971fcd00bc7504bae2a5c357a4f7789",
+    "hash": "bdbfda54d18c8fc82d468f86fa3109ce29854beefba093e46e83145a1359cdc0"
+  },
+  {
+    "index": 22,
+    "timestamp": "2026-04-14T14:33:08.929124",
+    "data": {
+      "round": 22,
+      "avg_val_acc": 0.6329,
+      "trust_scores": [
+        0.7383,
+        0.7197,
+        0.7605
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 39.12,
+        "Hospital_B": 6.37,
+        "Hospital_C": 19.04
+      },
+      "global_model_hash": "816961b5e387c5c8"
+    },
+    "previous_hash": "bdbfda54d18c8fc82d468f86fa3109ce29854beefba093e46e83145a1359cdc0",
+    "hash": "969ba0432ba4646e2457b1222cd73a3859f056f450e1595838866a6c319a7d2b"
+  },
+  {
+    "index": 23,
+    "timestamp": "2026-04-14T14:33:16.198464",
+    "data": {
+      "round": 23,
+      "avg_val_acc": 0.6285,
+      "trust_scores": [
+        0.7426,
+        0.7196,
+        0.7613
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 40.29,
+        "Hospital_B": 6.53,
+        "Hospital_C": 19.58
+      },
+      "global_model_hash": "1d6efc0f7cdb729b"
+    },
+    "previous_hash": "969ba0432ba4646e2457b1222cd73a3859f056f450e1595838866a6c319a7d2b",
+    "hash": "cc26547c2eaaf41190d25d660be1f7934d6516b39a723ab1ba78a9dfb0b2cde3"
+  },
+  {
+    "index": 24,
+    "timestamp": "2026-04-14T14:33:24.212448",
+    "data": {
+      "round": 24,
+      "avg_val_acc": 0.6249,
+      "trust_scores": [
+        0.7433,
+        0.7197,
+        0.7605
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 41.46,
+        "Hospital_B": 6.69,
+        "Hospital_C": 20.1
+      },
+      "global_model_hash": "fff50c0b345f4d74"
+    },
+    "previous_hash": "cc26547c2eaaf41190d25d660be1f7934d6516b39a723ab1ba78a9dfb0b2cde3",
+    "hash": "b9a828c902528c7dd2e390c2da28df48c964ff81043c02911d5f049641151e5a"
+  },
+  {
+    "index": 25,
+    "timestamp": "2026-04-14T14:33:32.062643",
+    "data": {
+      "round": 25,
+      "avg_val_acc": 0.6335,
+      "trust_scores": [
+        0.745,
+        0.7194,
+        0.7601
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 42.61,
+        "Hospital_B": 6.85,
+        "Hospital_C": 20.62
+      },
+      "global_model_hash": "a32c111e14b9606d"
+    },
+    "previous_hash": "b9a828c902528c7dd2e390c2da28df48c964ff81043c02911d5f049641151e5a",
+    "hash": "1832a477cd1b149f5962cec8b1908eef591931cc45172ec30cba7bf8f7e7febe"
+  },
+  {
+    "index": 26,
+    "timestamp": "2026-04-14T14:33:40.255893",
+    "data": {
+      "round": 26,
+      "avg_val_acc": 0.6303,
+      "trust_scores": [
+        0.7443,
+        0.719,
+        0.7598
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 43.76,
+        "Hospital_B": 7.01,
+        "Hospital_C": 21.13
+      },
+      "global_model_hash": "c0699e7813ad2b56"
+    },
+    "previous_hash": "1832a477cd1b149f5962cec8b1908eef591931cc45172ec30cba7bf8f7e7febe",
+    "hash": "c2e6c2be739b19b494d3dcd543e96c04cb414219c60e58dfefd24f6b101f13e0"
+  },
+  {
+    "index": 27,
+    "timestamp": "2026-04-14T14:33:48.400052",
+    "data": {
+      "round": 27,
+      "avg_val_acc": 0.6289,
+      "trust_scores": [
+        0.7462,
+        0.7187,
+        0.7606
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 44.89,
+        "Hospital_B": 7.17,
+        "Hospital_C": 21.64
+      },
+      "global_model_hash": "efc24e45f2bcea78"
+    },
+    "previous_hash": "c2e6c2be739b19b494d3dcd543e96c04cb414219c60e58dfefd24f6b101f13e0",
+    "hash": "1352d0e572ddbaaff26325e5508c68a8492a0612d762d31b29b30aebd5861f78"
+  },
+  {
+    "index": 28,
+    "timestamp": "2026-04-14T14:33:55.961352",
+    "data": {
+      "round": 28,
+      "avg_val_acc": 0.6311,
+      "trust_scores": [
+        0.7452,
+        0.7185,
+        0.7609
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 46.02,
+        "Hospital_B": 7.32,
+        "Hospital_C": 22.14
+      },
+      "global_model_hash": "408c5eb98c87276f"
+    },
+    "previous_hash": "1352d0e572ddbaaff26325e5508c68a8492a0612d762d31b29b30aebd5861f78",
+    "hash": "a821c2142aef2e54779f271449e96edbbe7786dde1f588c6453d7f53612d8725"
+  },
+  {
+    "index": 29,
+    "timestamp": "2026-04-14T14:34:04.621242",
+    "data": {
+      "round": 29,
+      "avg_val_acc": 0.6306,
+      "trust_scores": [
+        0.7467,
+        0.7183,
+        0.762
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 47.13,
+        "Hospital_B": 7.47,
+        "Hospital_C": 22.64
+      },
+      "global_model_hash": "4c7650c66ae57806"
+    },
+    "previous_hash": "a821c2142aef2e54779f271449e96edbbe7786dde1f588c6453d7f53612d8725",
+    "hash": "a2b91f2dbc198d3cf152cfb7d278176b18dc6121e57c0c94ee3b7041dccc04fd"
+  },
+  {
+    "index": 30,
+    "timestamp": "2026-04-14T14:34:13.292410",
+    "data": {
+      "round": 30,
+      "avg_val_acc": 0.6334,
+      "trust_scores": [
+        0.7458,
+        0.7181,
+        0.7624
+      ],
+      "privacy_budget_spent": {
+        "Hospital_A": 48.24,
+        "Hospital_B": 7.62,
+        "Hospital_C": 23.13
+      },
+      "global_model_hash": "e96dde303f040a2f"
+    },
+    "previous_hash": "a2b91f2dbc198d3cf152cfb7d278176b18dc6121e57c0c94ee3b7041dccc04fd",
+    "hash": "87079a34fe40a44689897fcfad39638f862a765cbb7675eafcfe623a8e419916"
+  }
+]

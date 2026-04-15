@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Clinical Authority | Federated Heart Risk System</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#0d1c2e",
+                        "tertiary-fixed-dim": "#6cd3f7",
+                        "background": "#f7f9fb",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#00468c",
+                        "surface-tint": "#005db6",
+                        "on-tertiary-fixed-variant": "#004e61",
+                        "on-primary-container": "#98bdff",
+                        "tertiary-fixed": "#b7eaff",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "secondary": "#515f74",
+                        "surface-bright": "#f7f9fb",
+                        "secondary-container": "#d5e3fc",
+                        "surface-container": "#eceef0",
+                        "inverse-surface": "#2d3133",
+                        "surface-container-high": "#e6e8ea",
+                        "on-primary-fixed": "#001b3d",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "on-secondary-container": "#57657a",
+                        "primary": "#00346c",
+                        "inverse-on-surface": "#eff1f3",
+                        "tertiary-container": "#005367",
+                        "on-tertiary-fixed": "#001f28",
+                        "on-tertiary-container": "#61c9ec",
+                        "on-background": "#191c1e",
+                        "inverse-primary": "#a9c7ff",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "primary-container": "#004b95",
+                        "outline-variant": "#c3c6d4",
+                        "on-surface": "#191c1e",
+                        "tertiary": "#003a4a",
+                        "outline": "#737783",
+                        "surface-dim": "#d8dadc",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#d6e3ff",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#d5e3fc",
+                        "surface": "#f7f9fb",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#a9c7ff",
+                        "on-surface-variant": "#434652"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="bg-background text-on-surface min-h-screen">
+    <!-- Sidebar -->
+    <aside class="fixed left-0 top-0 flex flex-col h-full p-4 bg-[#f7f9fb] dark:bg-slate-950 h-screen w-64 border-r-0 z-50">
+        <div class="mb-10 px-4">
+            <h1 class="font-manrope font-extrabold text-[#00346c] text-xl">Clinical Ops</h1>
+            <p class="text-slate-500 text-[10px] uppercase tracking-widest mt-1">Federated Node 01-A</p>
+        </div>
+        <nav class="flex-1">
+            <!-- Risk Triage (scroll to top) -->
+            <div class="bg-white dark:bg-slate-900 text-[#00346c] dark:text-blue-300 rounded-lg shadow-sm font-bold px-4 py-3 mb-2 flex items-center gap-3 cursor-pointer" data-section="risk-triage">
+                <span class="material-symbols-outlined" data-icon="monitor_heart">monitor_heart</span>
+                <span class="font-inter text-[13px] font-medium">Risk Triage</span>
+            </div>
+            <!-- Patient Input -->
+            <div class="text-slate-600 dark:text-slate-400 px-4 py-3 mb-2 hover:translate-x-1 transition-transform flex items-center gap-3 cursor-pointer" data-section="patient-input">
+                <span class="material-symbols-outlined" data-icon="person_search">person_search</span>
+                <span class="font-inter text-[13px] font-medium">Patient Input</span>
+            </div>
+            <!-- Expert Consensus -->
+            <div class="text-slate-600 dark:text-slate-400 px-4 py-3 mb-2 hover:translate-x-1 transition-transform flex items-center gap-3 cursor-pointer" data-section="expert-consensus">
+                <span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+                <span class="font-inter text-[13px] font-medium">Expert Consensus</span>
+            </div>
+            <!-- Privacy Audit -->
+            <div class="text-slate-600 dark:text-slate-400 px-4 py-3 mb-2 hover:translate-x-1 transition-transform flex items-center gap-3 cursor-pointer" data-section="privacy-audit">
+                <span class="material-symbols-outlined" data-icon="enhanced_encryption">enhanced_encryption</span>
+                <span class="font-inter text-[13px] font-medium">Privacy Audit</span>
+            </div>
+            <!-- Explainability -->
+            <div class="text-slate-600 dark:text-slate-400 px-4 py-3 mb-2 hover:translate-x-1 transition-transform flex items-center gap-3 cursor-pointer" data-section="explainability">
+                <span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+                <span class="font-inter text-[13px] font-medium">Explainability</span>
+            </div>
+        </nav>
+    </aside>
+    
+    <div class="ml-64 min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="flex justify-between items-center px-6 py-3 w-full max-w-full bg-slate-50 dark:bg-slate-900 shadow-[0_8px_30px_rgb(0,52,108,0.04)] sticky top-0 z-40">
+            <div class="flex items-center gap-4">
+                <span class="text-xl font-bold font-manrope text-[#00346c] dark:text-blue-300">Clinical Authority</span>
+                <div class="h-6 w-px bg-slate-200 mx-2"></div>
+                <div class="flex items-center gap-2 bg-surface-container px-3 py-1.5 rounded-lg">
+                    <span class="material-symbols-outlined text-sm text-secondary" data-icon="search">search</span>
+                    <input class="bg-transparent border-none focus:ring-0 text-sm w-48" placeholder="Patient ID or Block Hash..." type="text"/>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="flex gap-4">
+                    <span class="material-symbols-outlined text-slate-500 cursor-pointer" data-icon="hub">hub</span>
+                    <span class="material-symbols-outlined text-slate-500 cursor-pointer" data-icon="notifications">notifications</span>
+                    <span class="material-symbols-outlined text-[#00346c] cursor-pointer" data-icon="account_circle">account_circle</span>
+                </div>
+            </div>
+        </header>
+        
+        <main class="flex-1 p-8">
+            <!-- Page Header -->
+            <div id="risk-triage-section" class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <h2 class="text-4xl font-headline font-extrabold text-primary tracking-tight">Federated Heart Risk Triage</h2>
+                    <p class="text-secondary font-medium mt-1 flex items-center gap-2">
+                        Privacy-preserving • Multi-hospital consensus • Blockchain-verified
+                    </p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="bg-surface-container-high px-4 py-2 rounded-xl flex items-center gap-3">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-surface-tint opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-surface-tint"></span>
+                        </span>
+                        <span class="text-xs font-bold text-primary uppercase tracking-widest">3 Hospitals Active</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <div class="flex items-center gap-1.5 bg-green-50 text-green-700 px-3 py-1.5 rounded-full border border-green-100 text-[11px] font-bold">
+                            <span class="material-symbols-outlined text-sm" data-icon="security">security</span> GDPR
+                        </div>
+                        <div class="flex items-center gap-1.5 bg-blue-50 text-blue-700 px-3 py-1.5 rounded-full border border-blue-100 text-[11px] font-bold">
+                            <span class="material-symbols-outlined text-sm" data-icon="lock">lock</span> ε ≤ 8
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bento Grid -->
+            <div class="grid grid-cols-12 gap-6">
+                <!-- Patient Input Section (with ID) -->
+                <section id="patient-input-section" class="col-span-12 lg:col-span-4 flex flex-col gap-6">
+                    <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="font-headline text-lg font-bold">Patient Input</h3>
+                            <button class="text-primary text-xs font-bold hover:underline" id="samplePatientBtn">Prefill Sample Patient</button>
+                        </div>
+                        <div class="space-y-5">
+                            <div>
+                                <label class="block text-[11px] font-bold text-secondary uppercase mb-2">Age</label>
+                                <input id="ageInput" class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary/20 text-on-surface" type="number" value="62"/>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-[11px] font-bold text-secondary uppercase mb-2">Systolic BP</label>
+                                    <input id="bpInput" class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary/20 text-on-surface" type="number" value="145"/>
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-bold text-secondary uppercase mb-2">BMI</label>
+                                    <input id="bmiInput" class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary/20 text-on-surface" type="number" value="28.4"/>
+                                </div>
+                            </div>
+                            <div class="space-y-4 pt-2">
+                                <label class="flex items-center justify-between cursor-pointer group">
+                                    <span class="text-sm font-medium text-on-surface">Chest Pain</span>
+                                    <div class="relative inline-flex items-center">
+                                        <input id="chestPainCheck" checked class="sr-only peer" type="checkbox"/>
+                                        <div class="w-11 h-6 bg-surface-container-high rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+                                    </div>
+                                </label>
+                                <label class="flex items-center justify-between cursor-pointer group">
+                                    <span class="text-sm font-medium text-on-surface">Shortness of Breath</span>
+                                    <div class="relative inline-flex items-center">
+                                        <input id="sobCheck" class="sr-only peer" type="checkbox"/>
+                                        <div class="w-11 h-6 bg-surface-container-high rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+                                    </div>
+                                </label>
+                                <label class="flex items-center justify-between cursor-pointer group">
+                                    <span class="text-sm font-medium text-on-surface">Smoker</span>
+                                    <div class="relative inline-flex items-center">
+                                        <input id="smokerCheck" checked class="sr-only peer" type="checkbox"/>
+                                        <div class="w-11 h-6 bg-surface-container-high rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <button id="runTriageBtn" class="w-full mt-8 bg-primary text-white font-bold py-4 rounded-xl flex items-center justify-center gap-3 shadow-lg shadow-primary/20 hover:bg-primary-container transition-colors">
+                            <span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+                            Run Federated Triage
+                        </button>
+                    </div>
+                    
+                    <!-- Privacy Metrics -->
+                    <div class="bg-surface-container-high rounded-2xl p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xs font-bold text-secondary uppercase tracking-widest">Privacy Budget</h3>
+                            <span class="text-xs font-bold text-primary">52% Capacity</span>
+                        </div>
+                        <div class="relative h-2 bg-surface-container-low rounded-full overflow-hidden mb-2">
+                            <div class="absolute top-0 left-0 h-full bg-surface-tint rounded-full" style="width: 52%"></div>
+                        </div>
+                        <div class="flex justify-between items-center text-[11px] font-medium text-on-surface-variant">
+                            <span>ε usage: 4.2 / 8.0</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[12px]" data-icon="verified">verified</span> Consensus Protocol Active</span>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Results Section -->
+                <div class="col-span-12 lg:col-span-8 space-y-6">
+                    <!-- Risk Assessment -->
+                    <div class="bg-surface-container-lowest rounded-2xl p-8 shadow-sm flex flex-col md:flex-row gap-12 items-center">
+                        <div class="relative w-40 h-40 flex items-center justify-center">
+                            <svg class="w-full h-full transform -rotate-90">
+                                <circle class="text-surface-container-low" cx="80" cy="80" fill="transparent" r="70" stroke="currentColor" stroke-width="12"></circle>
+                                <circle id="confidenceCircle" class="text-error" cx="80" cy="80" fill="transparent" r="70" stroke="currentColor" stroke-dasharray="440" stroke-dashoffset="110" stroke-width="12"></circle>
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span id="confidencePercent" class="text-4xl font-headline font-extrabold text-on-surface leading-none">75%</span>
+                                <span class="text-[10px] font-bold text-secondary uppercase mt-1">Confidence</span>
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center md:text-left">
+                            <div id="riskBadge" class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-error-container text-on-error-container font-bold text-xs uppercase mb-4">
+                                <span class="material-symbols-outlined text-sm" data-icon="warning">warning</span> <span id="riskBadgeText">High Risk Detected</span>
+                            </div>
+                            <h4 id="recTitle" class="text-2xl font-headline font-bold text-on-surface mb-3">Priority Clinical Intervention Recommended</h4>
+                            <p id="recDesc" class="text-on-surface-variant text-sm leading-relaxed max-w-md">
+                                Consensus suggests advanced atherosclerotic markers. Immediate follow-up with a standard cardiology diagnostic battery is advised based on federated aggregate analysis.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Expert Cards (Expert Consensus Section with ID) -->
+                    <div id="expert-consensus-section" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div id="expertCardA" class="bg-surface-container-low rounded-xl p-5 relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 w-2 h-full bg-error/50"></div>
+                            <h5 class="text-[10px] font-bold text-secondary uppercase mb-3">Hospital A (Cardiology)</h5>
+                            <div class="flex items-baseline gap-1 mb-1">
+                                <span class="expert-pred text-xl font-headline font-bold text-error">High</span>
+                                <span class="text-xs text-secondary">Risk</span>
+                            </div>
+                            <div class="flex items-center justify-between mt-4 text-[11px]">
+                                <span class="expert-conf text-secondary">Conf: 0.89</span>
+                                <span class="expert-trust text-primary font-bold">Trust: 0.94</span>
+                            </div>
+                        </div>
+                        <div id="expertCardB" class="bg-surface-container-low rounded-xl p-5 relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 w-2 h-full bg-error/50"></div>
+                            <h5 class="text-[10px] font-bold text-secondary uppercase mb-3">Hospital B (Geriatric)</h5>
+                            <div class="flex items-baseline gap-1 mb-1">
+                                <span class="expert-pred text-xl font-headline font-bold text-error">High</span>
+                                <span class="text-xs text-secondary">Risk</span>
+                            </div>
+                            <div class="flex items-center justify-between mt-4 text-[11px]">
+                                <span class="expert-conf text-secondary">Conf: 0.72</span>
+                                <span class="expert-trust text-primary font-bold">Trust: 0.82</span>
+                            </div>
+                        </div>
+                        <div id="expertCardC" class="bg-surface-container-low rounded-xl p-5 relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 w-2 h-full bg-primary/20"></div>
+                            <h5 class="text-[10px] font-bold text-secondary uppercase mb-3">Hospital C (General)</h5>
+                            <div class="flex items-baseline gap-1 mb-1">
+                                <span class="expert-pred text-xl font-headline font-bold text-on-surface">Med</span>
+                                <span class="text-xs text-secondary">Risk</span>
+                            </div>
+                            <div class="flex items-center justify-between mt-4 text-[11px]">
+                                <span class="expert-conf text-secondary">Conf: 0.64</span>
+                                <span class="expert-trust text-primary font-bold">Trust: 0.87</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Explainability Section (with ID) -->
+                    <div id="explainability-section" class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="material-symbols-outlined text-primary" data-icon="visibility">visibility</span>
+                            <h3 class="font-headline text-lg font-bold">Explainability Summary</h3>
+                        </div>
+                        <div class="space-y-6">
+                            <p class="text-sm text-on-surface-variant">
+                                Key contributing factors identified: High systolic BP (145 mmHg) and smoking history are the dominant drivers of the current risk score across all participating federated nodes.
+                            </p>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-xs font-bold mb-1.5">
+                                        <span>Systolic BP</span>
+                                        <span class="text-error">+34.2% Influence</span>
+                                    </div>
+                                    <div class="h-2 bg-surface-container-low rounded-full overflow-hidden">
+                                        <div class="h-full bg-error" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs font-bold mb-1.5">
+                                        <span>Smoking Status</span>
+                                        <span class="text-error">+22.1% Influence</span>
+                                    </div>
+                                    <div class="h-2 bg-surface-container-low rounded-full overflow-hidden">
+                                        <div class="h-full bg-error/70" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs font-bold mb-1.5">
+                                        <span>Age Vector</span>
+                                        <span class="text-on-surface-variant">+15.4% Influence</span>
+                                    </div>
+                                    <div class="h-2 bg-surface-container-low rounded-full overflow-hidden">
+                                        <div class="h-full bg-surface-tint" style="width: 40%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blockchain Audit Table (Privacy Audit Section with ID) -->
+                <section id="privacy-audit-section" class="col-span-12">
+                    <div class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden">
+                        <div class="px-6 py-5 border-b border-surface-container flex items-center justify-between">
+                            <h3 class="font-headline text-lg font-bold flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary" data-icon="database">database</span>
+                                Blockchain Audit Trail
+                            </h3>
+                            <span class="text-[11px] font-bold text-secondary uppercase tracking-widest">Live Sync: 4ms ago</span>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead class="bg-surface-container-low">
+                                    <tr>
+                                        <th class="px-6 py-4 text-[11px] font-bold text-secondary uppercase tracking-wider">Block #</th>
+                                        <th class="px-6 py-4 text-[11px] font-bold text-secondary uppercase tracking-wider">Event Type</th>
+                                        <th class="px-6 py-4 text-[11px] font-bold text-secondary uppercase tracking-wider">Transaction Hash</th>
+                                        <th class="px-6 py-4 text-[11px] font-bold text-secondary uppercase tracking-wider">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-surface-container">
+                                    <tr class="hover:bg-surface-container-low/50 transition-colors">
+                                        <td class="px-6 py-4 font-mono text-xs text-primary font-bold">#102,492</td>
+                                        <td class="px-6 py-4 text-sm font-medium">Model Gradient Pull</td>
+                                        <td class="px-6 py-4 font-mono text-[11px] text-on-surface-variant">0x72a...f42c</td>
+                                        <td class="px-6 py-4"><span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-green-100 text-green-700 uppercase">Verified</span></td>
+                                    </tr>
+                                    <tr class="hover:bg-surface-container-low/50 transition-colors">
+                                        <td class="px-6 py-4 font-mono text-xs text-primary font-bold">#102,491</td>
+                                        <td class="px-6 py-4 text-sm font-medium">Privacy Mask Applied</td>
+                                        <td class="px-6 py-4 font-mono text-[11px] text-on-surface-variant">0x31b...e901</td>
+                                        <td class="px-6 py-4"><span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-green-100 text-green-700 uppercase">Verified</span></td>
+                                    </tr>
+                                    <tr class="hover:bg-surface-container-low/50 transition-colors">
+                                        <td class="px-6 py-4 font-mono text-xs text-primary font-bold">#102,490</td>
+                                        <td class="px-6 py-4 text-sm font-medium">Consensus Signed (Hosp-A)</td>
+                                        <td class="px-6 py-4 font-mono text-[11px] text-on-surface-variant">0xa44...128b</td>
+                                        <td class="px-6 py-4"><span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-green-100 text-green-700 uppercase">Verified</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="mt-auto flex justify-between items-center px-8 py-4 w-full bg-[#f7f9fb] dark:bg-slate-950">
+            <div class="flex flex-col gap-1">
+                <p class="font-inter text-[11px] text-slate-500 uppercase tracking-widest">© 2024 The Clinical Authority | Federated Heart Risk System v2.4.0</p>
+                <p class="text-[10px] text-slate-400 italic">This system provides decision support only and does not constitute a final clinical diagnosis.</p>
+            </div>
+            <div class="flex items-center gap-8">
+                <div class="flex gap-4">
+                    <a class="font-inter text-[11px] text-slate-500 uppercase tracking-widest hover:text-slate-600 hover:underline transition-opacity" href="#">HIPAA Compliance</a>
+                    <a class="font-inter text-[11px] text-slate-500 uppercase tracking-widest hover:text-slate-600 hover:underline transition-opacity" href="#">Privacy Protocol</a>
+                    <a class="font-inter text-[11px] text-slate-500 uppercase tracking-widest hover:text-slate-600 hover:underline transition-opacity" href="#">Audit Logs</a>
+                </div>
+                <div class="flex gap-4 opacity-50 grayscale hover:grayscale-0 transition-all cursor-default">
+                    <img alt="Partner Region" class="h-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAELwozUIb_qH_phy8LddHEaYQWNQ9BtTeATpF_D3uzPNe3MDNnxIg12kvmWsVhNbcSHcTV0_ISKaFPoEzsNkFh75Kk6n2YEHoFecBjVN-0nbYcabl0v3uRQZjbSfQXXfdgJ_26uT1D8RE_sdrDmuvFE-JscB8ES7VkVk0oodVMxuS2nUA7dS9ONaxgSxsQqkPqUK3JTN9ZbLl44bN9buM-A1QURW1xJAJsMGK1ZTppPz6IYWIRyQQ_UjYvK1ntUH4NsqhHgZF64gY"/>
+                    <img alt="Partner Region" class="h-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyP-XF_s3Y6TfuOyMCLa5FVYpCE9edlE7jdstPGBS7DZlWW9Z-bMYfL8nwuBG9_QoDqVbJt19el_2XGxiSbJ6zCe_AMoI_GHSSEAnGVuhowrtCqSjekhO8zBMZUbNXubrXeWdkxXGrm83kmW4IiJZ49P4c_OKngo35ov1tmZJmHLTuiq_nSW4n_6Vq8kXMZRGhiHEuU6Ralb3HQxVKsQ5V4UhwqMXBJ-q2FZiUi1-hh8dtzuyhFlnkqDBvpz7n6TYCrgDJFGCSyj8"/>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
