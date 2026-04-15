@@ -7,7 +7,7 @@
 
 FedHeart-Secure is a comprehensive federated learning framework for privacy-preserving cardiovascular risk triage across heterogeneous hospital environments. It combines differential privacy, trust-weighted aggregation, personalized fine-tuning, a calibrated meta-ensemble, and a blockchain audit trail to deliver near-centralized accuracy (79.6%) while complying with GDPR and HIPAA principles.
 
-![System Architecture](docs/architecture.png)
+![System Architecture](architecture.jpeg)
 
 ---
 
